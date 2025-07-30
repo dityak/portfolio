@@ -87,6 +87,14 @@ const ContactSection = () => {
                   <Button 
                     className="w-full bg-gradient-primary shadow-elegant hover:shadow-float transition-all duration-500"
                     size="lg"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/resume.pdf';
+                      link.download = 'Ditya_Siddaraj_Resume.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
                   >
                     <Download className="w-5 h-5 mr-2" />
                     Download Resume
@@ -101,19 +109,19 @@ const ContactSection = () => {
                 <h3 className="text-xl font-playfair font-bold mb-4">Professional Summary</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    🎓 <span className="font-medium text-foreground">Current Student:</span> B.E Information Science Engineering (CGPA: 9.25)
+                     <span className="font-medium text-foreground">Current Student:</span> B.E Information Science Engineering (CGPA: 9.25)
                   </p>
                   <p>
-                    💻 <span className="font-medium text-foreground">Experience:</span> Frontend Development & Product Management
+                    <span className="font-medium text-foreground">Experience:</span> Frontend Development & Product Management
                   </p>
                   <p>
-                    🚀 <span className="font-medium text-foreground">Specialties:</span> React, Python, AWS, Product Strategy
+                    <span className="font-medium text-foreground">Specialties:</span> React, Python, AWS, Product Strategy
                   </p>
                   <p>
-                    🎯 <span className="font-medium text-foreground">Interests:</span> IoT, Machine Learning, Web3 Technologies
+                    <span className="font-medium text-foreground">Interests:</span> IoT, Machine Learning, Cloud Services,Cyber Security
                   </p>
                   <p>
-                    🎨 <span className="font-medium text-foreground">Hobbies:</span> Singing, Equestrian Sports, Photography
+                     <span className="font-medium text-foreground">Hobbies:</span> Singing, Equestrian Sports
                   </p>
                 </div>
               </CardContent>
@@ -126,7 +134,7 @@ const ContactSection = () => {
               <h3 className="text-2xl font-playfair font-bold mb-6">Send a Message</h3>
               
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-2 text-foreground">
                       First Name
@@ -208,15 +216,17 @@ const ContactSection = () => {
               <p className="text-muted-foreground mb-6 max-w-md">
                 Whether it's a new project, collaboration, or just a friendly chat about technology and innovation.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   variant="outline"
                   className="glass border-primary/30 hover:bg-primary/10"
+                  onClick={() => window.open('https://calendly.com/dityasiddaraj', '_blank')}
                 >
                   Schedule a Call
                 </Button>
                 <Button 
                   className="bg-gradient-primary shadow-elegant hover:shadow-float transition-all duration-500"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Start a Project
                 </Button>

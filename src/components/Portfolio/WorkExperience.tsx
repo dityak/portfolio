@@ -45,7 +45,7 @@ const WorkExperience = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-playfair font-bold mb-6">
-            Work <span className="gradient-text">Experience</span>
+            Intern <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Building innovative solutions and leading product development across multiple organizations

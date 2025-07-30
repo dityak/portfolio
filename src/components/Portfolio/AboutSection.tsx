@@ -55,7 +55,7 @@ const AboutSection = () => {
                   </div>
                   <div className="flex items-center gap-4 mb-2">
                     <Badge variant="secondary" className="bg-success/20 text-success-foreground">
-                      CGPA: 9.25
+                      CGPA: 9.10
                     </Badge>
                     <span className="text-sm text-muted-foreground">Current</span>
                   </div>

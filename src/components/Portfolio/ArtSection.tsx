@@ -10,20 +10,21 @@ const ArtSection = () => {
   // Placeholder for art categories and images
   const artCategories = [
     { id: "all", name: "All", icon: Heart },
-    { id: "singing", name: "Singing", icon: Music },
+    
     { id: "equestrian", name: "Equestrian", icon: Camera },
-    { id: "photography", name: "Photography", icon: Camera },
+    
     { id: "digital", name: "Digital Art", icon: Palette },
   ];
 
   // Placeholder art items - these will be replaced with actual images
   const artItems = [
+    
     {
       id: 1,
-      title: "Vocal Performance",
-      category: "singing",
-      description: "Classical music performance at college event",
-      image: "/placeholder-art-1.jpg", // To be replaced with actual images
+      title: "Equestrian Training",
+      category: "equestrian", 
+      description: "Training session at the riding academy",
+      image: "public/Eq1.jpeg", // To be replaced with actual images
       date: "2024"
     },
     {
@@ -31,15 +32,16 @@ const ArtSection = () => {
       title: "Equestrian Training",
       category: "equestrian", 
       description: "Training session at the riding academy",
-      image: "/placeholder-art-2.jpg", // To be replaced with actual images
-      date: "2024"
+      image: "public/eq2.jpeg", // To be replaced with actual images
+      date: "2025"
     },
+   
     {
       id: 3,
-      title: "Nature Photography",
-      category: "photography",
-      description: "Landscape photography during weekend trip",
-      image: "/placeholder-art-3.jpg", // To be replaced with actual images
+      title: "Digital Illustration",
+      category: "digital",
+      description: "Character design and digital painting",
+      image: "public/art1.jpg", // To be replaced with actual images
       date: "2024"
     },
     {
@@ -47,25 +49,19 @@ const ArtSection = () => {
       title: "Digital Illustration",
       category: "digital",
       description: "Character design and digital painting",
-      image: "/placeholder-art-4.jpg", // To be replaced with actual images
+      image: "public/ar2.jpeg", // To be replaced with actual images
       date: "2024"
     },
     {
       id: 5,
-      title: "Concert Performance",
-      category: "singing",
-      description: "Solo performance at cultural festival",
-      image: "/placeholder-art-5.jpg", // To be replaced with actual images
-      date: "2023"
-    },
-    {
-      id: 6,
-      title: "Horse Competition",
-      category: "equestrian",
-      description: "Local equestrian competition participation",
-      image: "/placeholder-art-6.jpg", // To be replaced with actual images
-      date: "2023"
+      title: "Digital Illustration",
+      category: "digital",
+      description: "Character design and digital painting",
+      image: "public/art3.jpeg", // To be replaced with actual images
+      date: "2024"
     }
+    
+
   ];
 
   const filteredItems = selectedCategory === "all" 
@@ -116,12 +112,28 @@ const ArtSection = () => {
               className="group shadow-elegant hover:shadow-float transition-all duration-500 overflow-hidden"
             >
               <div className="relative">
-                {/* Placeholder Image Container */}
-                <div className="aspect-square bg-gradient-secondary flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center p-8">
-                    <Camera className="w-16 h-16 text-white/80 mx-auto mb-4" />
-                    <p className="text-white/80 font-medium">{item.title}</p>
-                    <p className="text-white/60 text-sm mt-2">Image Placeholder</p>
+                {/* Actual Image Display */}
+                <div className="aspect-square relative overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => {
+                      // Fallback to placeholder if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const placeholder = target.nextElementSibling as HTMLElement;
+                      if (placeholder) placeholder.style.display = 'flex';
+                    }}
+                  />
+                  
+                  {/* Fallback placeholder (hidden by default) */}
+                  <div className="aspect-square bg-gradient-secondary items-center justify-center relative overflow-hidden absolute inset-0" style={{display: 'none'}}>
+                    <div className="text-center p-8">
+                      <Camera className="w-16 h-16 text-white/80 mx-auto mb-4" />
+                      <p className="text-white/80 font-medium">{item.title}</p>
+                      <p className="text-white/60 text-sm mt-2">Image not found</p>
+                    </div>
                   </div>
                   
                   {/* Overlay for hover effect */}
@@ -161,48 +173,9 @@ const ArtSection = () => {
           ))}
         </div>
 
-        {/* Add New Art Placeholder */}
-        <div className="text-center">
-          <Card className="inline-block shadow-elegant hover:shadow-float transition-all duration-500 group cursor-pointer">
-            <CardContent className="p-12">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Plus className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-playfair font-bold mb-4">
-                  More Art Coming Soon
-                </h3>
-                <p className="text-muted-foreground mb-6 max-w-md">
-                  I'm constantly creating new art and documenting my creative journey. 
-                  Check back soon for more updates!
-                </p>
-                <Badge variant="outline" className="border-primary/30 text-primary">
-                  Gallery Expanding
-                </Badge>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        
 
-        {/* Instructions for adding images */}
-        <div className="mt-16 text-center">
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-playfair font-bold mb-4 text-primary">
-                📸 Ready to Add Your Art?
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                This section is ready for your creative works! You can easily add your art photos by:
-              </p>
-              <div className="text-left max-w-2xl mx-auto space-y-2 text-sm text-muted-foreground">
-                <p>• Replacing placeholder images with your actual art photos</p>
-                <p>• Adding new categories for different types of creative work</p>
-                <p>• Updating titles and descriptions for each piece</p>
-                <p>• Including dates and additional metadata</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        
       </div>
     </section>
   );
