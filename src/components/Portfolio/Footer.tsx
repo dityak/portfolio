@@ -24,9 +24,7 @@ const Footer = () => {
             <h3 className="text-2xl font-playfair font-bold gradient-text mb-2">
               Ditya Siddaraj
             </h3>
-            <p className="text-muted-foreground">
-              Frontend Developer & Product Manager
-            </p>
+          
             <p className="text-sm text-muted-foreground mt-1">
               Building innovative solutions with passion
             </p>
