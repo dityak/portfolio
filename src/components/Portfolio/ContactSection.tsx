@@ -109,7 +109,7 @@ const ContactSection = () => {
                 <h3 className="text-xl font-playfair font-bold mb-4">Professional Summary</h3>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                     <span className="font-medium text-foreground">Current Student:</span> B.E Information Science Engineering (CGPA: 9.25)
+                     <span className="font-medium text-foreground">Current Student:</span> B.E Information Science Engineering (CGPA: 9.10)
                   </p>
                   <p>
                     <span className="font-medium text-foreground">Experience:</span> Frontend Development & Product Management
