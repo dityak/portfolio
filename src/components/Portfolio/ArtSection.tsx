@@ -24,7 +24,7 @@ const ArtSection = () => {
       title: "Equestrian Training",
       category: "equestrian", 
       description: "Training session at the riding academy",
-      image: "public/Eq1.jpeg", // To be replaced with actual images
+      image: "/Eq1.jpeg", // To be replaced with actual images
       date: "2024"
     },
     {
@@ -32,7 +32,7 @@ const ArtSection = () => {
       title: "Equestrian Training",
       category: "equestrian", 
       description: "Training session at the riding academy",
-      image: "public/eq2.jpeg", // To be replaced with actual images
+      image: "/eq2.jpeg", // To be replaced with actual images
       date: "2025"
     },
    
@@ -41,7 +41,7 @@ const ArtSection = () => {
       title: "Digital Illustration",
       category: "digital",
       description: "Character design and digital painting",
-      image: "public/art1.jpg", // To be replaced with actual images
+      image: "/art1.jpg", // To be replaced with actual images
       date: "2024"
     },
     {
@@ -49,7 +49,7 @@ const ArtSection = () => {
       title: "Digital Illustration",
       category: "digital",
       description: "Character design and digital painting",
-      image: "public/ar2.jpeg", // To be replaced with actual images
+      image: "/ar2.jpeg", // To be replaced with actual images
       date: "2024"
     },
     {
@@ -57,7 +57,7 @@ const ArtSection = () => {
       title: "Digital Illustration",
       category: "digital",
       description: "Character design and digital painting",
-      image: "public/art3.jpeg", // To be replaced with actual images
+      image: "/art3.jpeg", // To be replaced with actual images
       date: "2024"
     }
     

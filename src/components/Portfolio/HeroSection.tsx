@@ -143,9 +143,7 @@ const HeroSection = () => {
                 <br />
                 <span className="text-foreground">Siddaraj</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-2">
-                Frontend Developer & Product Manager
-              </p>
+              
               <p className="text-lg text-muted-foreground">
                 Creative Engineering Student | Passionate Singer | Equestrian
               </p>
@@ -190,7 +188,7 @@ const HeroSection = () => {
                 onClick={() => {
                   // Create a link to download resume - you'll need to add your actual resume file to public folder
                   const link = document.createElement('a');
-                  link.href = '/resume.pdf'; // You need to add your resume.pdf file to public folder
+                  link.href = '/DityaSiddarajResume.pdf'; // You need to add your resume.pdf file to public folder
                   link.download = 'Ditya_Siddaraj_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
