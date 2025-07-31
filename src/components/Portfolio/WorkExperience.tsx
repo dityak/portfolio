@@ -5,7 +5,7 @@ import { Calendar, MapPin, Building } from "lucide-react";
 const WorkExperience = () => {
   const experiences = [
     {
-      title: "Frontend Developer",
+      title: "Full Stack Developer",
       company: "Web3 onwards NFThing",
       period: "Dec 2023 - Present",
       location: "Remote",
@@ -30,13 +30,24 @@ const WorkExperience = () => {
     {
       title: "Developer",
       company: "BuoyantWorx Solutions Private Limited",
-      period: "March 2025 - Present",
+      period: "March 2025 - May 2025",
       location: "Remote",
       type: "Contract",
       achievements: [
         "Working on building a scalable message notification service using AWS."
       ],
       skills: ["AWS", "Backend Development", "Scalable Systems", "Cloud Services"]
+    },
+    {
+      title: "Centre Manager & Teacher",
+      company: "U&I Organisation",
+      period: "Aug 2022 - Nov 2024",
+      location: "Remote",
+      type: "Contract",
+      achievements: [
+        "Taught Science and Mathematics to students in Grades 10 and 12. Led the NGO center, overseeing day-to-day operations and management activities"
+      ],
+      skills: ["People Management","Leadership"]
     }
   ];
 
@@ -45,7 +56,7 @@ const WorkExperience = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-playfair font-bold mb-6">
-            Intern <span className="gradient-text">Experience</span>
+            Intern <span className="text-5xl font-playfair font-bold mb-6">Experience</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Building innovative solutions and leading product development across multiple organizations

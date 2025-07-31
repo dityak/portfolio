@@ -125,6 +125,14 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden flex items-center justify-center px-4">
+      Background Image with Blur
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-m scale-110"
+          style={{ backgroundImage: 'url("public/bg1.jpeg")' }}
+        ></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl float" style={{ animationDelay: '0s' }}></div>
@@ -144,7 +152,7 @@ const HeroSection = () => {
                 <span className="text-foreground">Siddaraj</span>
               </h1>
               
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-foreground">
                 Creative Engineering Student | Passionate Singer | Equestrian
               </p>
             </div>
@@ -188,7 +196,7 @@ const HeroSection = () => {
                 onClick={() => {
                   // Create a link to download resume - you'll need to add your actual resume file to public folder
                   const link = document.createElement('a');
-                  link.href = '/DityaSiddarajResume.pdf'; // You need to add your resume.pdf file to public folder
+                  link.href = '/DityaSiddarajfResume.pdf'; // You need to add your resume.pdf file to public folder
                   link.download = 'Ditya_Siddaraj_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();

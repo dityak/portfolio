@@ -8,7 +8,7 @@ const AboutSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-playfair font-bold mb-6">
-            About <span className="gradient-text">Me</span>
+            About <span className="text-5xl font-playfair font-bold mb-6">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Creative and motivated engineering student passionate about technology, 

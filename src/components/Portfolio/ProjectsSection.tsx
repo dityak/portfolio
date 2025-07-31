@@ -350,7 +350,7 @@ const ProjectsSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-playfair font-bold mb-6">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="text-5xl font-playfair font-bold mb-6">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Innovative solutions spanning IoT, machine learning, and web development
