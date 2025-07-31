@@ -60,7 +60,7 @@ const AboutSection = () => {
                     <span className="text-sm text-muted-foreground">Current</span>
                   </div>
                   <p className="text-muted-foreground">
-                    Pursuing undergraduate degree with exceptional academic performance
+                    Pursuing final year undergraduate degree 
                   </p>
                 </div>
 
@@ -68,7 +68,7 @@ const AboutSection = () => {
                   <div className="absolute w-4 h-4 bg-muted rounded-full -left-2 top-0"></div>
                   <div className="mb-2">
                     <h4 className="text-xl font-semibold text-foreground">PPEC High School</h4>
-                    <p className="text-muted-foreground">High School Education</p>
+                    <p className="text-muted-foreground">High School Education - secured 9th State Rank in SSLC </p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Badge variant="outline">Completed</Badge>
